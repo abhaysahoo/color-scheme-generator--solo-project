@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    color: #2B283A;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1em 0;
+    box-shadow: 0px 4px 11px 0px #00000026;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border: 1px solid #D1D5DB;
+    font-family: inherit;
+    border-radius: 6px;
+    color: #111827;
+    padding: 0.5em 1em;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.seed-color {
+    border: none;
+    width: 60px;
+    height: 43px;   
+    padding: 0px 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select::before,
+.custom-select::after {
+  --size: 0.3rem;
+  position: absolute;
+  content: "";
+  right: 1rem;
+  pointer-events: none;
+}
+
+.custom-select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+  top: 40%;
+}
+
+.custom-select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 55%;
+}
+
+.get-colors-btn {
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border-radius: 4px;
+    padding: 0.5em 2em;   
+    font-family: inherit;
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.75rem;
+    align-self: stretch;
+    cursor: pointer;
+}
+
+.color-scheme {
+    display: flex;
+    justify-content: center;   
+}
+
+.color-column {
+    height: 50vh;
+}
+
+.color-hex-value {
+    padding: 0.5em 1em;
+    line-height: 1.5;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+@media(max-width: 576px) {
+    .color-scheme {
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+    
+    .color-section {
+        display: flex;
+        gap: 1em;   
+    }
+    
+    .color-column {
+        height: 10vh;
+        max-width: 200px;
+        width: 100%;
+    }
+       
+    .color-hex-value {
+        align-self: center;
+        width: 50%;
+        text-align: center;
+    }
+}

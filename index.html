@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <!-- Inter Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <!-- viewport meta tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main>
+            <form>
+                <input type="color" id="seed-color" class="seed-color" value="#ff0000" />
+                <div class="custom-select">
+                    <select id="color-mode" class="color-mode">
+                        <option selected value="monochrome">Monochrome</option>
+                        <option value="monochrome-dark">Monochrome Dark</option>
+                        <option value="monochrome-light"> Monochrome Light</option>
+                        <option value="analogic">Analogic</option>
+                        <option value="complement">Complement</option>
+                        <option value="analogic-complement">Analogic Complement</option>   
+                        <option value="triad">Triad</option>   
+                        <option value="quad">Quad</option>   
+                    </select>
+                </div>
+                <button class="get-colors-btn" id="get-colors-btn">Get color scheme</button>
+            </form>
+            <div class="color-scheme" id="color-scheme">
+            </div>
+        <main>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
